@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Inscription = () => {
+const Home = () => {
     return (
         <div>
-            
+            <h2>Home</h2>
         </div>
     );
 }
 
-export default Inscription;
+export default Home;
