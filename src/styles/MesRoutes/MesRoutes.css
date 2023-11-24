@@ -1,0 +1,22 @@
+.container-routes{
+    background-color: #333;
+    height: 100vh;
+    padding: 50px;
+}
+.routes{
+    margin: 10px;
+    border: 1px solid;
+    text-decoration: none;
+    padding: 15px;
+    color: #fff;
+    transition: background .5s ease-in-out;
+}
+.routes:hover{
+    background-color: brown;
+    color: #fff;
+}
+h1{
+    margin: 50px;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
