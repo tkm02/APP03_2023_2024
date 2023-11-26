@@ -1,0 +1,25 @@
+/* Header Part */
+.topbar {
+    position: relative;
+    z-index: -50;
+    background: #0D78F2;
+    /* height: 200px; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 0 0 auto;
+    left: 0;
+    padding: 10px;
+}
+
+.topbar .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    /* flex-direction: column; */
+    /* border:  1px solid #fff; */
+    width: 100%;
+}

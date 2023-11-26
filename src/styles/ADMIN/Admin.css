@@ -1,0 +1,14 @@
+.container-statistique{
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid; */
+    width: 87%;
+    margin: 50px 0 0 auto;
+    padding: 10px;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid; */
+    align-items: center;
+}

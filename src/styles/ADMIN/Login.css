@@ -1,0 +1,65 @@
+.container-login-admin{
+    /* border: 1px solid; */
+    display: flex;
+    height: 90vh;
+    /* flex-direction: column; */
+    
+}
+
+.container-login-admin div{
+    /* border: 1px solid; */
+    width: 50%;
+    display: flex;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+form{
+    display: flex;
+    align-items: first flex-start;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 1px solid; */
+    width: 700px;
+    margin: 50px auto ;
+}
+form h1{
+    color: #333;
+    text-align: center;
+    /* border: 1px solid; */
+    width: 80%;
+}
+form input{
+    width: 95%;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    outline: none;
+    margin: 5px 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+form button{
+    width: 99%;
+    padding: 15px;
+    margin: 10px 0;
+    color: #f1f1f1;
+    border: 0;
+    background-color: #0D78F2;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background .5s ease-in-out;
+}
+form button:hover{
+    background-color: transparent;
+    color: #0D78F2;
+    border: 1px solid seagreen;
+}
+label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 3px 0;
+}
