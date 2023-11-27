@@ -8,7 +8,7 @@ function Admin() {
     <div>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/*" element={<Dashboard />} />
       </Routes>
     </div>
   );

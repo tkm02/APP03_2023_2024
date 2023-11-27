@@ -1,94 +1,49 @@
-/* Add your existing CSS styles here */
-
-/* Additional styles for the improved table */
-.table {
-    width: 100%;
-    margin-bottom: 1rem;
-    color: #212529;
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 50px 0 auto;
+}
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
 }
 
-.table th,
-.table td {
-    padding: 0.75rem;
-    vertical-align: top;
-    border-top: 1px solid #dee2e6;
+table th {
+  background-color: #0D78F2;
+  font-weight: bold;
+  color: #fff;
+}
+thead {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
-.table thead th {
-    vertical-align: bottom;
-    border-bottom: 2px solid #dee2e6;
+table tr:hover {
+  background-color: #DD1573;
+  color: #fff;
 }
 
-.table tbody + tbody {
-    border-top: 2px solid #dee2e6;
+table td.image {
+  max-width: 100px;
+}
+td img {
+  width: 50px;
 }
 
-.table .table {
-    background-color: #fff;
+table td.image img {
+  max-width: 100%;
+  height: auto;
 }
-
-.table-sm th,
-.table-sm td {
-    padding: 0.3rem;
-}
-
-.table-bordered {
-    border: 1px solid #dee2e6;
-}
-
-.table-bordered th,
-.table-bordered td {
-    border: 1px solid #dee2e6;
-}
-
-.table-bordered thead th,
-.table-bordered thead td {
-    border-bottom-width: 2px;
-}
-
-.table-borderless th,
-.table-borderless td,
-.table-borderless thead th,
-.table-borderless tbody + tbody {
+table td button{
+  background-color: #DD1573;
     border: 0;
-}
-
-.table-striped tbody tr:nth-of-type(odd) {
-    background-color: rgba(0, 123, 255, 0.05);
-}
-
-.table-hover tbody tr:hover {
-    color: #212529;
-    background-color: rgba(0, 123, 255, 0.075);
-}
-
-/* Styles for badges */
-.badge {
-    font-size: 0.75rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    padding: 0.25em 0.4em;
-    border-radius: 0.25rem;
-}
-
-.badge.bg-success {
+    padding: 5px;
     color: #fff;
-    background-color: #28a745;
-}
-
-/* Styles for notification */
-.notification {
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.notification.success {
-    border-color: #28a745;
-    color: #28a745;
+    cursor: pointer;
+    text-decoration: none;
 }

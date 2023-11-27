@@ -8,7 +8,6 @@ const NavBar = () => {
           <div className="navbar-header" data-logobg="skin6">
             <h3>Dashboard</h3>
           </div>
-
         </nav>
       </header>
     </div>

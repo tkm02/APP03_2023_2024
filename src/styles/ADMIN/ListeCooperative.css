@@ -1,0 +1,55 @@
+.table-liste-cooperatives {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 50px 0 auto;
+}
+.table-liste-cooperatives th,
+.table-liste-cooperatives td {
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+}
+.liste-titre{
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px;
+}
+.table-liste-cooperatives th {
+  background-color: #0D78F2;
+  font-weight: bold;
+  color: #fff;
+}
+.table-liste-cooperatives thead {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table-liste-cooperatives tr:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.table-liste-cooperatives td.image {
+  max-width: 100px;
+}
+td img {
+  width: 50px;
+}
+
+.table-liste-cooperatives td.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.table-liste-cooperatives td a{
+    background-color: #DD1573;
+    border: 0;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
