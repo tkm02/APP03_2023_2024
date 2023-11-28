@@ -33,7 +33,7 @@ const SideBar = () => {
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/admin/dashboard"
+                  to="/admin/dashboard/commande"
                 >
                 <i className="fa-solid fa-arrows-rotate"></i>
                   <span className="hide-menu">Commandes</span>

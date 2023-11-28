@@ -1,9 +1,27 @@
 import React, { useEffect, useState } from "react";
 import "../../../styles/ADMIN/OneCooperative.css";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-const OneCooperative = () => {
+const OneCooperative = (props, params) => {
+  const dataCooperative = props.data.cooperatives;
+  // console.log(ListeProduct);
+  const { idcooperative } = useParams();
   const [receptions, setReceptions] = useState([]);
+  const cooperativeId = parseInt(idcooperative, 10);
+
+  const OnecooperativeData = dataCooperative.find(
+    (coop) => coop.id === cooperativeId
+  );
+
+  const ListeProduct = OnecooperativeData.produits;
+  console.log(ListeProduct);
+  // const newReceptions = 
+    
+
+  if (!OnecooperativeData) {
+    return <div>Coopérative non trouvée</div>;
+  }
 
   const exampleReceptions = [
     { id: 1, productName: "Produit 1", validationColor: "#146907" },
@@ -11,26 +29,22 @@ const OneCooperative = () => {
     { id: 3, productName: "Produit 3", validationColor: "#FFCC00" },
   ];
 
-  useEffect(() => {
-    setReceptions(exampleReceptions);
-  }, []);
-
   return (
     <div className="container-one-cooperative">
-      <h2>nom de la cooperative</h2>
+      <h2>{OnecooperativeData.nom}</h2>
       <div className="container-statistique-cooperative">
         <div className="statistique">
           <span className="titre-stat">Nombre de menbre</span>
           <div className="stat-datas">
             <i className="fa-solid fa-users"></i>
-            <span id="stat-data">50</span>
+            <span id="stat-data">{OnecooperativeData.nombreMembres}</span>
           </div>
         </div>
         <div className="statistique">
           <span className="titre-stat">Stokc en kg (en ligne)</span>
           <div className="stat-datas">
             <i className="fa-solid fa-store"></i>
-            <span id="stat-data">1000 kg</span>
+            <span id="stat-data">10000 kg</span>
           </div>
         </div>
         <div className="statistique">
@@ -58,48 +72,52 @@ const OneCooperative = () => {
 
       <div className="other-data-cooperative">
         <div className="infos-cooperative">
-        <h2>Informations cooperative</h2>
+          <h2>Informations cooperative</h2>
           <div className="information-cooperative">
             <div className="info-coop">
-              <span>Nom de la cooperative : </span>
-              <span>Lieu : </span>
-              <span>Numéro de téléphone: </span>
-              <span>Nom du representant : </span>
-              <span>Role du representant : </span>
-              <span>Email du representant : </span>
-              <span>Numéro du representant : </span>
-              <span>Nombre de menbre : </span>
-              <span>Type de produit : </span>
+              <span>Nom de la cooperative :{OnecooperativeData.nom} </span>
+              <span>Lieu :{OnecooperativeData.lieu} </span>
+              <span>
+                Numéro de téléphone:{OnecooperativeData.numeroTelephone}{" "}
+              </span>
+              <span>
+                Nom du representant :{OnecooperativeData.representant.nom}{" "}
+              </span>
+              <span>
+                Role du representant :{OnecooperativeData.representant.role}{" "}
+              </span>
+              <span>
+                Email du representant :{OnecooperativeData.representant.email}{" "}
+              </span>
+              <span>
+                Numéro du representant :{OnecooperativeData.representant.numero}{" "}
+              </span>
+              <span>Nombre de menbre :{OnecooperativeData.nombreMembres} </span>
+              <span>
+                Type :{OnecooperativeData.typeProduit.map((el) => el)}
+              </span>
             </div>
           </div>
         </div>
 
         <div className="container-table-stock">
-          <h2 className="liste-titre">Stock en ligne</h2>
+          <h2 className="liste-titre">Stock envoyé</h2>
           <table className="table-stock-cooperatives">
             <thead>
               <tr>
                 <th>Type</th>
-                <th>Produit</th>
                 <th>Quantité(Kg)</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Légume</td>
-                <td>carotte</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td>Légume</td>
-                <td>Tomate</td>
-                <td>150</td>
-              </tr>
-              <tr>
-                <td>Fruit</td>
-                <td>Banane</td>
-                <td>120</td>
-              </tr>
+              {ListeProduct.map((coop) => {
+                return (
+                  <tr key={coop.id}>
+                    <td>{coop.type}</td>
+                    <td>{coop.stockEnKg}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>

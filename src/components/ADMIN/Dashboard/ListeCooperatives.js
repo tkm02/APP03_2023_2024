@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../../styles/ADMIN/ListeCooperative.css";
-const ListeCooperatives = () => {
+const ListeCooperatives = (props) => {
+
+    const data = props.infoListeCooperative.cooperatives ;
+    const [cooperative, setCooperative] = useState(data);
+
+  
   return (
     <div>
       <h2 className="liste-titre">Liste cooperatives</h2>
@@ -15,31 +20,16 @@ const ListeCooperatives = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Daiman</td>
-            <td>Napié</td>
-            <td>50</td>
-            <td>
-              <Link className="en-savoir-plus" to="/admin/dashboard/cooperatives/1">En savoir plus</Link>
-            </td>
-          </tr>
-          <tr>
-                <td>Daiman</td>
-                <td>Napié</td>
-                <td>50</td>
-                <td>
-                    <Link className="en-savoir-plus" to="/admin/dashboard/cooperatives/2">En savoir plus</Link>
-                </td>
-          </tr>
-          <tr>
-            <td>Daiman</td>
-            <td>Napié</td>
-            <td>50</td>
-            <td>
-              <Link className="en-savoir-plus" to="/admin/dashboard/cooperatives/3">En savoir plus</Link>
-            </td>
-          </tr>
-            
+          {cooperative.map((coop) => (
+            <tr key={coop.id}>
+              <td>{coop.nom}</td>
+              <td>{coop.lieu}</td>
+              <td>{coop.nombreMembres}</td>
+              <td>
+                <Link to={`/admin/dashboard/cooperatives/${coop.id}`}>Savoir plus</Link>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

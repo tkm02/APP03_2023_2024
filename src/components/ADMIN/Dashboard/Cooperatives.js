@@ -4,7 +4,8 @@ import "../../../styles/ADMIN/Cooperatives.css"
 import FormAdd from './FormAdd';
 import ListeCooperatives from './ListeCooperatives';
 import OneCooperative from './OneCooperative';
-const Cooperatives = () => {
+const Cooperatives = (props) => {
+    // console.log(props.dataCooperative);
     const actionsLink = (
         <>
             <div className='actions'>
@@ -13,7 +14,7 @@ const Cooperatives = () => {
                 <Link className='add-cooperative'>Ajouter une cooperative</Link>
             </div>
             <div className='cooperative-main'>
-                <ListeCooperatives />
+                <ListeCooperatives infoListeCooperative={props.dataCooperative}/>
             </div>
         </>
       
@@ -25,7 +26,7 @@ const Cooperatives = () => {
             <Routes>
                     <Route path='/' element={actionsLink} />
                     <Route path='/form' element={<FormAdd/>} />
-                    <Route path='/:idcooperative' element={<OneCooperative />} />
+                    <Route path='/:idcooperative' element={<OneCooperative data={props.dataCooperative}/>} />
             </Routes>
         </div>
     );
