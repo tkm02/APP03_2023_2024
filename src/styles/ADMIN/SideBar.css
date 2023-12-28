@@ -3,8 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-.left-sidebar {
+.TATETELA{
+    /* border: 2px solid; */
+    display: flex;
+    /* padding: 10px; */
     position: absolute;
+    height: 100%;
+}
+.TATETELA .left-sidebar {
+    /* position: absolute; */
     height: 100vh;
     top: 0px;
     z-index: 10;

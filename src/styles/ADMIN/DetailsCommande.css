@@ -1,0 +1,82 @@
+/* DetailsCommande.css */
+
+.details-container {
+  width: 60%;
+  margin: 50px auto;
+  /* border: 1px solid; */
+  -webkit-box-shadow: 0px 4px 7px 2px rgba(0,0,0,0.59);
+-moz-box-shadow: 0px 4px 7px 2px rgba(0,0,0,0.59);
+box-shadow: 0px 4px 7px 2px rgba(0,0,0,0.59);
+}
+
+.details-header {
+  background-color: #0D78F2;
+  padding: 10px;
+  color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.details-header h2 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.details-list {
+  list-style: none;
+  padding: 0;
+  /* border: 1px solid; */
+  display: flex;
+  flex-direction: column;
+}
+
+.details-list li {
+  margin: 10px 0;
+  /* border: 1px solid; */
+  display: flex;
+  padding: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.details-list li span {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.details-footer {
+  margin-top: 20px;
+  /* border: 1px solid; */
+  flex-wrap: nowrap;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.details-footer button{
+    padding: 8px;
+    margin: 2px;
+    border: 0;
+    background-color: #0D78F2;
+    /* width: 50%; */
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+.retour .back-btn {
+  background-color: #DD1573;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  padding: 8px ;
+}
+.retour{
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+.back-btn:hover {
+  background-color: #bb1663;
+}

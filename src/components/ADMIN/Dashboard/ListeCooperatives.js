@@ -4,7 +4,10 @@ import "../../../styles/ADMIN/ListeCooperative.css";
 const ListeCooperatives = (props) => {
 
     const data = props.infoListeCooperative.cooperatives ;
-    const [cooperative, setCooperative] = useState(data);
+    const [cooperative, setCooperative] = useState([]);
+    useEffect(() => {
+      setCooperative(data)
+    }, [data])
 
   
   return (

@@ -5,8 +5,8 @@ import Logo from "../../../images/ALT.png"
 
 const SideBar = () => {
   return (
-    <div>
-      <aside className="left-sidebar" data-sidebarbg="skin6">
+    <div className="TATETELA">
+      <aside className="left-sidebar">
         <ul className="logo">
         <img src={Logo} alt="" />
         </ul>
@@ -51,7 +51,7 @@ const SideBar = () => {
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/admin/dashboard"
+                  to="/admin/dashboard/stock"
                 >
                   <i className="fa-solid fa-cloud"></i>
                   <span className="hide-menu">Stock virtuel</span>
@@ -60,7 +60,7 @@ const SideBar = () => {
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/admin/dashboard"
+                  to="/admin/dashboard/formation"
                 >
                 <i className="fa-solid fa-chalkboard-user"></i>
                   <span className="hide-menu">Formations</span>

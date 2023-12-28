@@ -1,0 +1,45 @@
+/* styles/ADMIN/Commandes.css */
+
+.commandes-container {
+    margin-top: 20px;
+    /* border: 1px solid; */
+    width: 85%;
+    margin: 0 10px 0 auto;
+  }
+  
+  .commandes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .commandes-table th,
+  .commandes-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .commandes-table th {
+    background-color: #0D78F2;
+    color: #fff;
+  }
+  
+  .commandes-table tbody tr:hover {
+    background-color: #DD1573;
+  }
+  
+  .afficher-details-button {
+    background-color: #DD1573;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .afficher-details-button:hover {
+    background-color: #c9206fb8;
+  }
+  

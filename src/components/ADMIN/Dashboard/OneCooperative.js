@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../../../styles/ADMIN/OneCooperative.css";
 import { useParams } from "react-router-dom";
 // import { Link } from "react-router-dom";
@@ -7,7 +7,6 @@ const OneCooperative = (props, params) => {
   const dataCooperative = props.data.cooperatives;
   // console.log(ListeProduct);
   const { idcooperative } = useParams();
-  const [receptions, setReceptions] = useState([]);
   const cooperativeId = parseInt(idcooperative, 10);
 
   const OnecooperativeData = dataCooperative.find(
@@ -134,7 +133,7 @@ const OneCooperative = (props, params) => {
               </tr>
             </thead>
             <tbody>
-              {receptions.map((reception) => (
+              {exampleReceptions.map((reception) => (
                 <tr key={reception.id}>
                   <td>{reception.id}</td>
                   <td>{reception.productName}</td>

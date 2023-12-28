@@ -1,0 +1,10 @@
+.formations-list{
+    /* border: 1px solid; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 87%;
+    margin: 0 0 0 auto;
+}
+.container-formation-card h3{
+
+}

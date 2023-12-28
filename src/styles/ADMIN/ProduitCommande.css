@@ -1,0 +1,35 @@
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 12px;
+    text-align: left;
+    border: none;
+    /* border-bottom: 1px solid; */
+  }
+  
+  .custom-table th {
+    background-color: #0D78F2;
+    border-radius: 0;
+  }
+  
+  .product-cell-commande {
+    display: flex;
+    align-items: center;
+  }
+  .product-info-commande{
+      /* border: 1px solid; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .product-info-commande img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  
