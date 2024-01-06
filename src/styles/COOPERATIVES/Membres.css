@@ -1,0 +1,23 @@
+.container-menbre{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+}
+
+.add-menbers{
+    border: 1px solid;
+    text-decoration: none;
+    padding: 10px;
+    margin: 15px 0 0 50px;
+    width: 180px;
+    background-color: #489e55;
+    color: #fff;
+    font-weight: bold;
+    border: 0;
+    transition: background .3s ease-in-out;
+}
+.add-menbers:hover{
+    background-color: transparent;
+    border: 1px solid  #489e55;
+    color: #489e55;
+}

@@ -1,0 +1,61 @@
+.cooperative {
+  background-color: #489e55;
+  height: 100vh;
+  /* margin: -5px 0 0 0; */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../../images/pexels-ákos-szabó-440731.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container-login-cooperative {
+  /* border: 1px solid; */
+  width: 60%;
+  display: flex;
+  margin: 100px auto 20px auto;
+  background-color: #fff;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.27);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 15px;
+  box-shadow: -2px -1px 19px -7px rgba(0, 0, 0, 0.63);
+  -webkit-box-shadow: -2px -1px 19px -7px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: -2px -1px 19px -7px rgba(0, 0, 0, 0.63);
+}
+
+.container-login-cooperative .container-image-cooperative {
+  /* border: 1px solid; */
+  width: 50%;
+  background-image: url(../../images/pexels-sergei-a-2589457.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px 0 0 15px;
+
+}
+.container-login-cooperative form {
+  width: 50%;
+  margin-left: 10px;
+}
+.container-login-cooperative form h1{
+    color: #fff;
+    font-weight: 800;
+}
+.container-login-cooperative form input {
+  margin: 13px 0;
+}
+.container-login-cooperative form button {
+  background-color: #489e55;
+  width: 95%;
+}
+.container-login-cooperative form button:hover {
+  background-color: transparent;
+  color: #489e55;
+  border: 1px solid #489e55;
+}

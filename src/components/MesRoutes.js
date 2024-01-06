@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/MesRoutes/MesRoutes.css'
 import { Link } from 'react-router-dom';
+
 const MesRoutes = () => {
+    const [dataBackendTest, setDataBackendTest] = useState(null);
+    useEffect(() => {
+        fetch('/api').then(response=> response.json()).then(data=>setDataBackendTest(data))
+    }, []);
+
+    console.log('====================================');
+    console.log(dataBackendTest);
+    console.log('====================================');
     return (
         <div className='container-routes'>
             <h1>LES LIENS VERS LES DEFFERENTES PAGES</h1>

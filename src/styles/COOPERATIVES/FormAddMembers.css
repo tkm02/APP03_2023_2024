@@ -1,0 +1,56 @@
+.form-add-menbers{
+    /* border: 1px solid; */
+    display: flex;
+    /* flex-direction: column; */
+    width: 95%;
+}
+.form-add-menbers .main-content-form-menbers{
+    display: flex;
+    width: 100%;
+}
+.content-form-menbers{
+    /* border: 1px solid; */
+    width: 100%;
+}
+.content-form-menbers h2{
+    text-align: center;
+    font-size: 1.2rem;
+    color: #489e55;
+}
+.content-form-menbers div{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.btn-add-menbers{
+    background-color: #489e55;
+    width: 80%;
+    margin: 10px auto;
+}
+.btn-add-menbers:hover{
+    background-color: transparent;
+    color: #489e55;
+    border: 1px solid #489e55;
+}
+
+select,
+textarea {
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style spécifique pour le champ "Sexe" */
+select {
+  width: calc(100% - 18px); /* Ajustement pour la flèche du menu déroulant */
+}
+
+/* Style spécifique pour le champ "Adresse" */
+textarea {
+  height: 100px;
+  width: 95%;
+  resize: vertical; /* Permet à l'utilisateur de redimensionner verticalement */
+}

@@ -84,6 +84,14 @@ const StockVirtuel = () => {
       stock: 30,
       price: 1.8,
     },
+    {
+      id: 2,
+      name: "igname",
+      type: "cereal",
+      image: "https://via.placeholder.com/150",
+      stock: 30,
+      price: 1.8,
+    },
     // ... autres produits
   ];
 
@@ -98,6 +106,7 @@ const StockVirtuel = () => {
     // Ajoutez le produit au tableau correspondant au type.
     productsByType[product.type].push(product);
   });
+
   return (
     <div className="stock-display">
       <h2>Stock disponible par type</h2>

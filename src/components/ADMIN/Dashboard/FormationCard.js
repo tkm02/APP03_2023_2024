@@ -1,6 +1,4 @@
 import React from "react";
-import video1 from "../../../videos/pexels_videos_2758322 (1080p) (1).mp4";
-import video2 from "../../../videos/pexels_videos_2300433 (1080p).mp4";
 import "../../../styles/ADMIN/FormationCard.css";
 
 const FormationCard = ({ formation }) => {

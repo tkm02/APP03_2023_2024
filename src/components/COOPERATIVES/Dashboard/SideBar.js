@@ -1,12 +1,12 @@
 import React from "react";
-import "../../../styles/ADMIN/SideBar.css";
+import "../../../styles/COOPERATIVES/SideBar.css";
 import { Link } from "react-router-dom";
 import Logo from "../../../images/ALT.png"
 
 const SideBar = () => {
   return (
     <div className="TATETELA">
-      <aside className="left-sidebar">
+      <aside className="left-sidebar-cooperative">
         <ul className="logo">
         <img src={Logo} alt="" />
         </ul>
@@ -15,52 +15,52 @@ const SideBar = () => {
               <li className="sidebar-item active">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/admin/dashboard"
+                  to="/cooperative/dashboard"
                 >
                   <i className="far fa-clock" aria-hidden="true"></i>
-                  <span className="hide-menu">Dashboard</span>
+                  <span className="hide-menu">Tableau de Bord</span>
                 </Link>
               </li>
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/admin/dashboard/cooperatives"
+                  to="/cooperative/dashboard/menbres"
                 >
                 <i className="fa-solid fa-people-line" aria-hidden="true"></i>
-                  <span className="hide-menu">Cooperatives</span>
+                  <span className="hide-menu">Membres</span>
                 </Link>
               </li>
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/admin/dashboard/commande"
+                  to="/cooperative/dashboard/commande"
                 >
                 <i className="fa-solid fa-arrows-rotate"></i>
-                  <span className="hide-menu">Commandes</span>
+                  <span className="hide-menu">Gestions</span>
                 </Link>
               </li>
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/admin/dashboard"
+                  to="/cooperative/dashboard"
                 >
                   <i className="fa-solid fa-microchip"></i>
-                  <span className="hide-menu">Hardware</span>
+                  <span className="hide-menu">Historique</span>
                 </Link>
               </li>
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/admin/dashboard/stock"
+                  to="/cooperative/dashboard/stock"
                 >
                   <i className="fa-solid fa-cloud"></i>
-                  <span className="hide-menu">Stock virtuel</span>
+                  <span className="hide-menu">Produits</span>
                 </Link>
               </li>
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/admin/dashboard/formation"
+                  to="/cooperative/dashboard/formation"
                 >
                 <i className="fa-solid fa-chalkboard-user"></i>
                   <span className="hide-menu">Formations</span>
@@ -69,19 +69,10 @@ const SideBar = () => {
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/admin/dashboard"
+                  to="/cooperative/dashboard"
                 >
                   <i className="fa-solid fa-code-pull-request"></i>
                   <span className="hide-menu">validations</span>
-                </Link>
-              </li>
-              <li className="sidebar-item">
-                <Link
-                  className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/admin/dashboard"
-                >
-                  <i className="fa-solid fa-code-pull-request"></i>
-                  <span className="hide-menu">PAIEMENT</span>
                 </Link>
               </li>
             </ul>

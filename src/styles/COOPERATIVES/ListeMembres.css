@@ -1,0 +1,45 @@
+/* styles/ADMIN/Commandes.css */
+
+.listes-menbre-container {
+    margin-top: 20px;
+    /* border: 1px solid; */
+    width: 95%;
+    margin: 0 10px 0 auto;
+  }
+  
+  .commandes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .commandes-table th,
+  .commandes-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .listes-menbre-container  .commandes-table th {
+    background-color: #489e55;
+    color: #fff;
+  }
+  
+  .listes-menbre-container .commandes-table tbody tr:hover {
+    background-color: #adc179;
+  }
+  
+  .listes-menbre-container .afficher-details-button {
+    background-color: #adc179;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .afficher-details-button:hover {
+    background-color: #95a864;
+  }
+  

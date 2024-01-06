@@ -1,0 +1,48 @@
+.form-submit-product{
+    /* border: 1px solid; */
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+}
+.container-form-submit-products{
+    /* border: 1px solid; */
+    display: flex;
+    width: 100%;
+}
+.container-form-submit-products .form-col-submit{
+    /* border: 1px solid; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.container-form-submit-products .form-col-submit .form-submit-item{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.form-submit-item .container-radio-form-submit{
+    /* border: 1px solid; */
+    display: flex;
+    width: 95%;
+    color: #489e55;
+}   
+.form-col-submit .container-radio-form-submit div{
+    /* border: 1px solid; */
+    width: 100%;
+}
+.form-col-submit textarea{
+    width: 95%;
+}
+.btn-submit-form-products{
+    background-color: #489e55;
+    width: 95%;
+    margin: 10px auto;
+}
+.btn-submit-form-products:hover{
+    background-color: transparent;
+    color: #489e55;
+    border: 1px solid #489e55;
+}
