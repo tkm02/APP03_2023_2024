@@ -180,16 +180,16 @@ const FormAddMembers = () => {
             />
           </div>
 
-          < div>
+          <div>
             <label>Avatar :</label>
             <input type="file" name="avatar" onChange={handleFileChange} />
           </div>
-          <div>
-            AFFICHE IMAGE (:
-          </div>
+          <div>AFFICHE IMAGE (:</div>
         </div>
       </div>
-      <button type="submit" className="btn-add-menbers">Ajouter Membre</button>
+      <button type="submit" className="btn-add-menbers">
+        Ajouter Membre
+      </button>
     </form>
   );
 };

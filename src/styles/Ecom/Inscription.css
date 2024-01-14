@@ -1,0 +1,65 @@
+.ecom-inscription{
+    background-color: #fff;
+    height: 100vh;
+    /* margin: -5px 0 0 0; */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../images/pexels-deneen-lt-1058401.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container-registration-ecom {
+  /* border: 1px solid; */
+  width: 90%;
+  height: 90%;
+  display: flex;
+  margin: 20px auto;
+  background-color: #fff;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.27);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 15px;
+  box-shadow: -2px -1px 19px -7px rgba(0, 0, 0, 0.63);
+  -webkit-box-shadow: -2px -1px 19px -7px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: -2px -1px 19px -7px rgba(0, 0, 0, 0.63);
+}
+.container-registration-ecom form{
+    width: 80%;
+}
+.container-registration-ecom .inputs-inscription{
+    display: flex;
+    /* border: 1px solid; */
+    width: 100%;
+    padding: 0;
+}
+.inputs-inscription div{
+    /* border: 1px solid; */
+    width: 100%;
+    padding: 0;
+    margin: 0 10px;
+}
+.inputs-inscription div input{
+    margin: 15px 0;
+    padding: 18px;
+    width: 100%;
+}
+.ecom-inscription h1{
+    text-align: center;
+    color: #f1f1f1;
+}
+.ecom-inscription button{
+    background-color: #3ecc72;
+    width: 98%;
+    margin: 0 10px ;
+}
+.ecom-inscription button:hover{
+    color: #fff;
+    background-color: #39d873;
+    border: 0;
+}

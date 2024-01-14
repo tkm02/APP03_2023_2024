@@ -7,7 +7,7 @@ const FormSendProducts = () => {
     nomProduit: "",
     descriptionProduit: "",
     typeProduit: "",
-    poidsQuantite: "",
+    Quantite: "",
     nomCooperative: "",
     lieuProduction: "",
     methodesProduction: "",
@@ -153,7 +153,7 @@ const FormSendProducts = () => {
             <input
               type="number"
               name="poidsQuantite"
-              value={formData.poidsQuantite}
+              value={formData.Quantite}
               onChange={handleChange}
             />
           </div>

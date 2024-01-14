@@ -1,0 +1,9 @@
+.container-one-product{
+    /* border: 1px solid; */
+    width: 100%;
+    display: flex;
+    /* padding: 10px; */
+    margin: 30px auto;
+    width: 90%;
+    /* justify-content: space-around; */
+}

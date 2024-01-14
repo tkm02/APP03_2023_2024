@@ -14,9 +14,8 @@ import TableauDeBord from "./TableauDeBord/TableauDeBord";
 const Ecom = () => {
   return (
     <div>
-    <h1>ECOM</h1>
       <Routes>
-        <Route path="/connection" element={<Connection />} />
+        <Route path="/" element={<Connection />} />
         <Route path="/detailCommande" element={<DetailCommande />} />
         <Route path="/detailProduits" element={<DetailProduits />} />
         <Route path="/favoris" element={<Favoris />} />

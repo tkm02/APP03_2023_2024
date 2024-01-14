@@ -1,0 +1,81 @@
+.header-ecom{
+    /* border: 1px solid; */
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-agroleadtech img{
+    width: 180px;
+}
+.recherche-produit{
+    /* border: 1px solid; */
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recherche-produit .container-input-recherche-produit{
+    border: 2px solid #0EAF22;
+    width: 90%;
+    /* padding: 10px; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.container-input-recherche-produit input{
+    width: 95%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+}
+.container-input-recherche-produit .fa-magnifying-glass{
+    cursor: pointer;
+    color: #0EAF22;
+    font-size: 1.5rem;
+}
+
+
+.naviguation-links .container-link-naviguation-ecom{
+    border: 1px solid #0EAF22;
+    display: flex;
+    border-radius: 10px;
+}
+.container-link-naviguation-ecom a{
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #0EAF22;
+    color: #fff;
+    font-size: 1.4em;
+
+}
+.container-link-naviguation-ecom .favoris-link{
+    border-radius: 10px 0 0 10px;
+}
+.container-link-naviguation-ecom .compte-link{
+    border-radius: 0 10px 10px 0;
+    background-color: #fff;
+    color: #0EAF22;
+}
+.panier-link{
+    position: relative;
+}
+.nombre-panier{
+    position: absolute;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    color: #0EAF22;
+    top: 6px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    font-weight: bold;
+}

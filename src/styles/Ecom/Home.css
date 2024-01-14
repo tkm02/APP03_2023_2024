@@ -1,0 +1,25 @@
+.home h2{
+    /* border: 1px solid; */
+    width: 90%;
+    margin: 15px auto;
+    text-align: start;
+    font-family: "Outfit", sans-serif;
+    font-weight: bold;
+}
+.home h2 span{
+    color: #0D78F2;
+}
+.home h2 span.Tech{
+    color: #0EAF22;
+}
+.card-container {
+    border: 1px solid;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 10px auto;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+  }

@@ -1,0 +1,151 @@
+.product-card-ecom  {
+    border: 1px solid #ddd;
+    /* border-radius: 5px; */
+    /* padding: 10px; */
+    /* margin: 10px; */
+
+    width: 227px;
+    /* height: 350px; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: #333; */
+    transition: box-shadow border 0.3s ease;
+  }
+  
+  .product-card-ecom:hover {
+    box-shadow: 0px 0px 10px 0px #ddd;
+    border: 1px solid #438026;
+  }
+  
+  .product-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product-details {
+    padding: 5px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    /* text-align: center; */
+    /* border: 1px solid; */
+    width: 100%;
+  }
+  
+  .product-name {
+    font-size: 1rem;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin: 0;
+    /* border: 1px solid; */
+  }
+  
+  .product-price {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 3px 0;
+    /* border: 1px solid; */
+    align-items: flex-start;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+    font-weight: lighter;
+  }
+  
+  .product-rating {
+    font-size: 1.2rem;
+    margin: 0;
+    /* border: 1px solid; */
+  }
+  
+  .star {
+    color: #ffac00;
+  }
+  
+  .product-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid; */
+    height: 80%;
+  }
+  .add-to-cart{
+    padding: 10px;
+    position: absolute;
+    right: 4px;
+    bottom: 4%;
+  }
+  .cart-icon {
+    background-color: #f1f1f1;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    margin: 0 auto;
+    cursor: pointer;
+    text-decoration: none;
+    transition:background .3s ease-in-out ;
+  }
+  .cart-icon:hover{
+    background-color: #438026;
+    color: #fff;
+  }
+  .cart-icon img{
+    width: 25px;
+  }
+  
+  .hover-buttons {
+    /* display: none; */
+    text-align: center;
+    /* border: 1px solid; */
+    /* background-color: #438026; */
+  }
+  
+  .product-card-ecom:hover.hover-buttons {
+    display: block;
+  }
+  
+  .see-more,
+  .add-to-favorites {
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition:background .3s ease-in-out ;
+  }
+  
+  .see-more:hover,
+  .add-to-favorites:hover {
+    background-color: #438026;
+  }
+  
+  
+  /* grid deals */
+  .grid-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: auto;
+    height: auto  ;
+    background-color: #fff;
+  }

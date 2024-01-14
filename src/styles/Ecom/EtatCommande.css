@@ -1,0 +1,72 @@
+.container-states-commandes{
+    /* border: 1px solid; */
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px; */
+    font-family: "Outfit", sans-serif;
+    font-weight: bold;
+}
+.card-state-commande{
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    color: #fff;
+}
+
+.card-state-commande h4{
+    /* border: 1px solid; */
+    text-align: start;
+    font-family: "Outfit", sans-serif;
+    margin: 0 0 10px 5px;
+
+}
+.card-state-commande div{
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.card-state-commande div .number-state{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: #fff;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.card-state-commande .progress-bar-state-commande{
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0 0 0;
+}
+.progress-bar-state-commande .bar-state-color{
+    width: 50%;
+    padding: 10px;
+    background-color: #0EAF22;
+}
+
+.card-state-commande.deux{
+    background-color: #146907;
+}
+.number-state.deux{
+    color: #146907;
+}
+
+.card-state-commande.trois{
+    background-color: #0D78F2;
+}
+.number-state.trois{
+    color: #0D78F2;
+}
+.card-state-commande.fin{
+    background-color: #DD1573;
+}
+.number-state.fin{
+    color: #DD1573;
+}
