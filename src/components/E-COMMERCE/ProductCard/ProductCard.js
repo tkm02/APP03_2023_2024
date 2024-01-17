@@ -1,15 +1,15 @@
 import React from "react";
 import "../../../styles/Ecom/ProductCard.css";
-import img from "../../../images/aubergine.png";
+// import img from "../../../images/aubergine.png";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ image, name, price, oldPrice, rating, classStyle }) => {
+const ProductCard = ({ image, name, price, oldPrice, rating, classStyle,id }) => {
   const conditionOldPrice =
     oldPrice === 0 ? "" : <span className="old-price">XOF {oldPrice}/Kg </span>;
 
   return (
     <div className={`product-card-ecom ${classStyle}`}>
-      <img src={img} alt={name} className="product-image" />
+      <img src={image} alt={name} className="product-image" />
 
       <div className="product-details">
         <h3 className="product-name">{name}</h3>
@@ -33,7 +33,7 @@ const ProductCard = ({ image, name, price, oldPrice, rating, classStyle }) => {
 
       <div className="product-actions">
         <div className="hover-buttons">
-          <Link className="see-more cart-icon" to="/ecom/detailProduits">
+          <Link className="see-more cart-icon" to={`/ecom/detailProduits/description/${id}`}>
             <ifram className="fa-regular fa-eye"></ifram>
           </Link>
           <button className="add-to-favorites cart-icon">

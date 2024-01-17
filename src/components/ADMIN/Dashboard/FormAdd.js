@@ -1,6 +1,12 @@
 import { useState, React } from "react";
 import "../../../styles/ADMIN/FormAdd.css"
+import axios from "axios";
+import {useNavigate} from "react-router-dom"
+
+
 const FormAdd = () => {
+  const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         cooperativeName: "",
         addressGeographique: "",
@@ -18,6 +24,7 @@ const FormAdd = () => {
         nombreMembres: "",
         acceptationConditions: false,
         image: null,
+        password:""
     });
 
     // Fonction pour gérer les changements dans le formulaire
@@ -47,6 +54,13 @@ const FormAdd = () => {
     // Fonction pour gérer la soumission du formulaire
     const handleSubmit = (e) => {
         e.preventDefault();
+        axios.post(`http://localhost:5000/api/admin/dashboard/cooperatives/form`, { formData })
+    .then(res => {
+        navigate("cooperatives")
+    })
+    .catch(err=>{
+      console.log(err);
+    })
         // Ajoutez ici le code pour traiter les données du formulaire (par exemple, envoyer à un backend)
         console.log(formData);
     };
@@ -80,7 +94,10 @@ const FormAdd = () => {
                             <label>Son rôle</label>
                             <input type="text" name="representativeRole" onChange={handleChange} value={formData.representativeRole} />
                         </div>
-
+                        <div>
+                        <label>Mot de passe (Admin)</label>
+                        <input type="password" name="password" onChange={handleChange} value={formData.password}/>
+                    </div>
                        
                     </div>
 
@@ -119,8 +136,10 @@ const FormAdd = () => {
                                 </label>
 
                             </div>
+                            
                        
                         </div>
+                        
 
                        
 

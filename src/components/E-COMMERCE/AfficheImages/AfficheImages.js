@@ -10,18 +10,18 @@ const AfficheImages = ({ imageList }) => {
   return (
     <div className="gauche">
       <div className="détail">
-        {imageList.map((image, index) => (
+        {[0,1,2,4].map((_, index) => (
           <div
             key={index}
             className="img"
-            onClick={() => handleImageClick(image)}
+            onClick={() => handleImageClick(imageList)}
           >
-            <img src={image} alt="img" />
+            <img src={imageList} alt="img" />
           </div>
         ))}
       </div>
       <div className="image-selectionner">
-        <img id="img-select" src={selectedImage} alt="Selected" />
+        <img id="img-select" src={imageList} alt="Selected" />
       </div>
     </div>
   );

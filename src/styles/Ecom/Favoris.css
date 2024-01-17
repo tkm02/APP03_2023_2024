@@ -1,0 +1,128 @@
+.section-panier {
+    /* border: 2px solid; */
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto 100px auto;
+  }
+  
+  .table-container {
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .styled-table-fav {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .styled-table-fav th,
+  .styled-table-fav td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    /* width: 100%; */
+  }
+  
+  .styled-table-fav th {
+    background-color: transparent;
+    border-radius: 15px;
+    border-collapse: collapse;
+    font-weight: 300;
+  }
+  
+  .styled-table-fav td .btn-remove {
+    background-color: transparent;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  .styled-table-fav td .btn-remove:hover {
+    background-color: brown;
+    color: #fff;
+    border: none;
+  }
+  .styled-table-fav h2 {
+    text-align: center;
+  }
+  .styled-table-fav td span {
+    font-size: 18px;
+  }
+  .div-update-btn {
+    display: flex;
+    padding: 10px;
+    height: 55px;
+    align-items: center;
+    justify-content: flex-start;
+    /* border: 1px solid; */
+    text-align: start;
+    /* background-color: #211e1e; */
+  }
+  
+  .product-cell {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-info img {
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+    border: none;
+  }
+  
+  .styled-table-fav td h5 {
+    /* border: 1px solid; */
+    border-radius: 5px;
+    width: 70%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .styled-table-fav td h5.stock {
+    background-color: #579e0c5e;
+    color: #516e32;
+  }
+  .styled-table-fav td h5.nostock {
+    background-color: rgba(165, 42, 42, 0.488);
+    color: brown;
+  }
+  .socials{
+    /* border: 1px solid; */
+    display: flex;
+  }
+  .social{
+    font-size: 2em;
+    margin: 5px;
+    color: #ccc;
+  }
+  .add-panier {
+    background-color: #516e32;
+    border: none;
+    width: 80%;
+    color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  

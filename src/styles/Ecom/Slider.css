@@ -1,36 +1,180 @@
-.slider-container {
-    position: relative;
-    width: 90%;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    margin: 20px auto;
-    overflow: hidden;
-    padding: 0;
+style: .top__home {
+  width: calc(100% - 3rem);
+  height: 480px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1.5rem;
+  border-radius: 1.3rem;
+  position: relative;
+  z-index: 0;
+  overflow: hidden; /* Pour s'assurer que le filtre ne dépasse pas */
+  position: relative;
+  /* background: url("../../images/"); */
+  background-position: center center;
+  background-size: cover;
+}
+
+.top__home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  z-index: 1;
+}
+
+.cadre__photo {
+  border: 0.2rem solid #fff;
+  border-radius: 0.5rem;
+  height: 350px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.cadre__photo img {
+  height: 320px;
+  width: 280px;
+  position: relative;
+  left: 1rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  object-position: center;
+  margin-left: -2rem;
+}
+
+.title {
+  background-color: #fff;
+  padding: 0.4rem 1.5rem;
+  border-radius: 0.2rem;
+  position: absolute;
+  top: 0;
+  left: 220px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.title:hover {
+  background-color: #335c67;
+  color: #fff;
+}
+
+.welcome__texte {
+  font-size: clamp(1.1rem, 5vw, 2.3rem);
+  font-weight: 400;
+  font-family: "nunito", sans-serif;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+  top: -2rem;
+  left: 2rem;
+}
+
+.custom {
+  font-weight: bold;
+  color: #ffbe0b;
+  font-weight: bold;
+  font-family: "Outfit", sans-serif;
+}
+
+.para_welcome_text {
+  margin-top: 1rem;
+  font-weight: 300;
+  font-size: clamp(0.9rem, 5vw, 1.2rem);
+  color: #dee2e6;
+}
+
+.text__1 {
+  font-size: clamp(1rem, 5vw, 1.3rem);
+  color: #0eaf22;
+}
+
+.btn_box {
+  margin-top: 1.5rem;
+}
+
+.btn {
+  background-color: #0eaf22;
+  color: #fff;
+  padding: 0.6rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid #0eaf22;
+  color: #fff;
+}
+
+.top__home {
+  width: calc(100% - 3rem);
+  height: 480px;
+  margin: 0 auto;
+  background: url("../../images/pexels-sergei-a-2589457.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1.5rem;
+  /* border-radius: 1.3rem; */
+  position: relative;
+  z-index: 0;
+  width: 90%;
+}
+
+.box__categorie {
+  width: 160px;
+  height: 55px;
+  border-radius: 0.3rem;
+  background-color: #e9ecef;
+  color: #212529;
+  margin: 1rem auto;
+  line-height: 55px;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  position: relative;
+  z-index: -10;
+}
+
+@media screen and (max-width: 850px) {
+  .top__home {
+    justify-content: center;
+    height: auto;
+    padding: 2rem;
   }
-  .slider {
-    display: flex;
-    overflow: hidden;
+
+  .cadre__photo {
+    display: none;
+  }
+
+  .welcome__texte {
+    text-align: center;
+    left: 0;
+    margin: 0;
+    margin-top: 2rem;
+  }
+
+  .title {
+    /* left: 0; */
     width: 100%;
+    margin: 50PX;
   }
-  .slider-container h2{
-    position: absolute;
-    z-index: 1000 ;
-    margin: 10px;
-  }
-  
-  .slider .img {
-    width: 100%;
-    opacity: 0;
-    position: absolute;
-    background-position: center;
-    transition: opacity .3s ease-in-out;
-  }
-  
-  .slider .img.active {
-    opacity: 1;
-  }
-  
-  
- 
+}

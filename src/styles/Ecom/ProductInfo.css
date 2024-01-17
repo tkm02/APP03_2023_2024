@@ -1,5 +1,5 @@
 .droite{
-    border: 1px solid;
+    /* border: 1px solid; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -20,10 +20,11 @@
 }
 .ligne1{
     display: flex;
-    border: 1px solid;
+    /* border: 1px solid; */
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+    margin: 0;
 }
 .stock{
     margin: 0 5px;
@@ -38,18 +39,14 @@
 .étoile{
     display: flex;
     margin-top: 3px;
-    border: 1px solid;
+    /* border: 1px solid; */
     width: 100%;
     font-size: 1.2em;
-}
-.étoile p{
-    margin-left: 5px;
-    font-size: x-small;
 }
 .prix{
     display: flex;
     margin-top: 10px;
-    border: 1px solid;
+    /* border: 1px solid; */
     width: 100%;
     font-size: 1.2rem;
     align-items: center;
@@ -70,7 +67,7 @@ del{
     padding: 5px 15px;
     margin: 5px;
 }
-.bar1,.bar2{
+.bar1,.bar2,.bar3{
     margin-top: 15px;
     background-color: #f1f1f1;
     width: 100%;
@@ -78,7 +75,7 @@ del{
 }
 .ligne2{
     display: flex;
-    border: 1px solid;
+    /* border: 1px solid; */
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -97,35 +94,25 @@ del{
     cursor: pointer;
 
 }
-/* .ligne2 h3{
-    margin-left: 100px;
-} */
-.insta{
-    margin-left: 5px;
-}
-.in{
-    margin-left: 5px;
-}
-.fb{
-    margin-left: 5px;
-}
+
 .txt1{
     margin-top: 5px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 .ligne3{
     display: flex;
-    border: 1px solid;
+    /* border: 1px solid; */
+    margin: 15px 0 0 0;
     width: 100%;
     justify-content: space-between;
 }
 .ajouter{
     display: flex;
-    border: 1px solid;
+    /* border: 1px solid; */
     align-items: center;
     justify-content: space-between;
     padding: 5px;
@@ -137,22 +124,10 @@ del{
     color: #f1f1f1;
     cursor: pointer;
 }
-/* .ajouter p{
-    
-    margin-top: 2px;
-} */
-#img1{
-    margin-left: 13px;
-    margin-right: 5px;
-    margin-top: 2px;
-}
-#img2{
-    margin-left: 5px;
-    margin-top: 2px;
-}
+
 .panier{
     display: flex;
-    border: 1px solid;
+    /* border: 1px solid; */
     width: 70%;
     align-items: center;
     justify-content: center;
@@ -165,21 +140,14 @@ del{
 }
 .panier ifram{
     font-size: 1.3em;
+    margin: 10px;
 }
 .panier p{
    margin-left: 40px;
    margin-top: 2px;
 }
-#favori{
-    margin-top: 10px;
-    margin-left: 10px;
-}
-.bar3{
-    width: 480px;
-    height: 3px;
-    margin-top: 15px;
-    background-color: rgb(250, 249, 249);
-}
+
+
 .ligne4{
     display: flex;
     margin-top: 5px;
@@ -187,33 +155,8 @@ del{
 .ligne4 p{
     margin-left: 2px;
 }
-.bas{
-    display: flex;
-}
-.D{
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 500px;
-    margin-top: 25px;
-}
-.I{
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-top: 25px;
-    margin-left: 100px;
-}
-.A{
-    background: none;
-    border: none;
 
 
-
-    cursor: pointer;
-    margin-top: 25px;
-    margin-left: 100px;
-}
 .bar4{
     width: 800px;
     height: 3px;

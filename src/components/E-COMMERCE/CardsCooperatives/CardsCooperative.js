@@ -1,12 +1,12 @@
 import React from "react";
 import "../../../styles/Ecom/CardsCooperative.css";
-import coop1 from "../../../images/NoPath - Copie (5).png";
+// import coop1 from "../../../images/NoPath - Copie (5).png";
 import coop2 from "../../../images/coop.png";
 import coop3 from "../../../images/NoPath - Copie (2).png";
 import coop4 from "../../../images/NoPath - Copie.png";
 import { Link } from "react-router-dom";
 
-const CardsCooperative = () => {
+const CardsCooperative = (props) => {
   return (
     <div className="container-cards-cooperatives">
       <div className="card-cooperative-info">

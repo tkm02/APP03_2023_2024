@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import "../../../styles/COOPERATIVES/FormAddMembers.css";
+import axios from "axios";
+import {useNavigate} from "react-router-dom"
+import { useParams } from "react-router-dom";
 
 const FormAddMembers = () => {
+  const navigate = useNavigate();
+  const { id } = useParams();
+
   const [formData, setFormData] = useState({
     nom: "",
     prenom: "",
@@ -25,8 +31,7 @@ const FormAddMembers = () => {
       [name]: value,
     }));
   };
-
-  const handleFileChange = (e) => {
+  const handleFileChange = async(e) => {
     const file = e.target.files[0];
     setFormData((prevData) => ({
       ...prevData,
@@ -36,25 +41,33 @@ const FormAddMembers = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios.post(`http://localhost:5000/api/cooperative/dashboard/${id}/menbres/ajout-menbre`, { formData })
+    .then(res => {
+        console.log(res);
+    })
+    .catch(err=>{
+      console.log(err);
+    })
     // Ajoutez ici la logique pour envoyer les données au backend
     console.log("Données soumises :", formData);
     // Réinitialisez le formulaire après soumission
-    setFormData({
-      nom: "",
-      prenom: "",
-      dateNaissance: "",
-      sexe: "",
-      adresse: "",
-      email: "",
-      telephone: "",
-      role: "",
-      dateAdhesion: "",
-      typeParticipation: "",
-      username: "",
-      password: "",
-      avatar: null,
-    });
+    // setFormData({
+    //   nom: "",
+    //   prenom: "",
+    //   dateNaissance: "",
+    //   sexe: "",
+    //   adresse: "",
+    //   email: "",
+    //   telephone: "",
+    //   role: "",
+    //   dateAdhesion: "",
+    //   typeParticipation: "",
+    //   username: "",
+    //   password: "",
+    //   avatar: null,
+    // });
   };
+  
 
   return (
     <form onSubmit={handleSubmit} className="form-add-menbers">
@@ -91,8 +104,8 @@ const FormAddMembers = () => {
           <div>
             <label>Sexe :</label>
             <select name="sexe" value={formData.sexe} onChange={handleChange}>
-              <option value="homme">Homme</option>
-              <option value="femme">Femme</option>
+              <option value="Homme">Homme</option>
+              <option value="Femme">Femme</option>
             </select>
           </div>
           <div>

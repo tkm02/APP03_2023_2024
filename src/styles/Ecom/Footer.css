@@ -1,0 +1,110 @@
+footer {
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    margin-bottom: 0;
+    padding: 10px;
+    margin-top: 50px;
+  }
+  .footer-links {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-links .col {
+    /* border: 1px solid; */
+    width: 50%;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .footer-links .col ul {
+    list-style: none;
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .footer-links .col ul li {
+    margin: 5px 0;
+    /* border: 1px solid; */
+    text-align: start;
+  }
+  
+  .footer-links .col-1 {
+    width: 100%;
+  }
+  
+  .footer-links .col-1 .footer-logo {
+    background-image: url(../../images/ALT_BG_BLANC.png);
+    width: 80%;
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  .footer-links .col-1 .number {
+    margin: 25px 0;
+    border-bottom: 2px solid #81ed0d;
+    width: 75.5%;
+  }
+  
+  .footer-links .col h3 {
+    color: #333;
+  }
+  .footer-links .col a {
+    color: #999999;
+    text-decoration: none;
+  }
+  
+  .mahoufarm {
+    border-top: 2px solid #211e1e;
+    width: 85%;
+    font-size: 0.8rem;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+  }
+  .mahoufarm span {
+    width: 80%;
+  }
+  .means-payement {
+    /* border: 1px solid; */
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #fff; */
+  }
+  .methode {
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border: 1px solid; */
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .methode-apple {
+    background-image: url(../../images/OM.jpg);
+  }
+  .methode-visa {
+    background-image: url(../../images/MTN.jpg);
+  }
+  .methode-discover {
+    background-image: url(../../images/MOOV.png);
+  }
+  .methode-mastercard {
+    background-image: url(../../images/WAVE.png);
+  }
+  .methode-cart {
+    background-image: url(../../images/VISA.png);
+  }
+  

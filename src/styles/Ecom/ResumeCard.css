@@ -1,0 +1,51 @@
+
+.resume-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    height: 50%;
+    margin: 40px 0 0 0;
+    font-family: "Outfit", sans-serif;
+
+   
+  
+  }
+  
+  .resume-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0 ;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .total {
+    font-weight: bold;
+    border-bottom: none;
+  }
+  
+  .payment-button {
+    display: block;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #146907;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payment-button:hover {
+    background-color: #105406;
+  }

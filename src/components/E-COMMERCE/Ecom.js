@@ -10,6 +10,8 @@ import Inscription from "./INSCRIPTION/Inscription";
 import Paiement from "./Paiement/Paiement";
 import Panier from "./Panier/Panier";
 import TableauDeBord from "./TableauDeBord/TableauDeBord";
+import ProductPage from "./ProductPage/ProductPage";
+import Facturations from "./Facturations/Facturations";
 
 const Ecom = () => {
   return (
@@ -17,13 +19,15 @@ const Ecom = () => {
       <Routes>
         <Route path="/" element={<Connection />} />
         <Route path="/detailCommande" element={<DetailCommande />} />
-        <Route path="/detailProduits" element={<DetailProduits />} />
+        <Route path="/detailProduits/description/:idClient" element={<DetailProduits />} />
         <Route path="/favoris" element={<Favoris />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/:id/home" element={<Home />} />
         <Route path="/inscription" element={<Inscription />} />
         <Route path="/paiement" element={<Paiement />} />
         <Route path="/panier" element={<Panier />} />
         <Route path="/tableaudebord" element={<TableauDeBord />} />
+        <Route path="/products" element={<ProductPage />} />
+        <Route path="/facturations" element={<Facturations />} />
       </Routes>
     </div>
   );

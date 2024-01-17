@@ -4,11 +4,14 @@ import { Link, Route, Routes } from "react-router-dom";
 import FormAddMembers from "./FormAddMembers";
 import "../../../styles/COOPERATIVES/Membres.css";
 
-const Membres = () => {
+const Membres = ({ id }) => {
   const LinkAdd = (
     <div className="container-menbre">
-      <ListeMembres />
-      <Link to="/cooperative/dashboard/menbres/ajout-menbre" className="add-menbers">
+      <ListeMembres id={id}/>
+      <Link
+        to={`/cooperative/dashboard/${id}/menbres/ajout-menbre`}
+        className="add-menbers"
+      >
         Ajouter menbre
       </Link>
     </div>

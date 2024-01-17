@@ -7,3 +7,18 @@
     width: 90%;
     /* justify-content: space-around; */
 }
+.tab-naviguation{
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid;
+}
+.tab-naviguation a{
+    /* border: 1px solid; */
+    text-decoration: none;
+    margin: 0 20px;
+    color: #332;
+    font-size: 1.1rem;
+}

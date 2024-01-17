@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../../styles/ADMIN/ListeCooperative.css";
-const ListeCooperatives = (props) => {
+import axios from "axios";
 
-    const data = props.infoListeCooperative.cooperatives ;
-    const [cooperative, setCooperative] = useState([]);
-    useEffect(() => {
-      setCooperative(data)
-    }, [data])
 
+const ListeCooperatives = () => {
   
+ 
+  const [cooperative, setCooperative] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5000/api/admin/dashboard/cooperatives`)
+      .then((res) => {
+        const coop = res.data.cooperatives;
+        setCooperative(coop);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <div>
       <h2 className="liste-titre">Liste cooperatives</h2>
@@ -24,12 +33,14 @@ const ListeCooperatives = (props) => {
         </thead>
         <tbody>
           {cooperative.map((coop) => (
-            <tr key={coop.id}>
-              <td>{coop.nom}</td>
-              <td>{coop.lieu}</td>
+            <tr key={coop._id}>
+              <td>{coop.cooperativeName}</td>
+              <td>{coop.addressGeographique}</td>
               <td>{coop.nombreMembres}</td>
               <td>
-                <Link to={`/admin/dashboard/cooperatives/${coop.id}`}>Savoir plus</Link>
+                <Link to={`/admin/dashboard/cooperatives/${coop._id}`}>
+                  Savoir plus
+                </Link>
               </td>
             </tr>
           ))}

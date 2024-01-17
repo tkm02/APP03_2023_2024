@@ -1,0 +1,17 @@
+// <h2>
+      //   Commençons vos achats dés maintenant,<span>NOM_DE_ENTRERISE</span>
+      // </h2>
+      // <EtatCommande />
+
+      // <div className="card-container">
+      //   {popularProductsData.map((item) => (
+      //     <ProductCard
+      //       key={item.id}
+      //       name={item.name}
+      //       price={item.price}
+      //       image={item.image}
+      //       oldPrice={item.oldPrice}
+      //       rating={item.rating}
+      //     />
+      //   ))}
+      // </div>

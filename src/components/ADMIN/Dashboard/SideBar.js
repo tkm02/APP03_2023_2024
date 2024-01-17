@@ -69,7 +69,7 @@ const SideBar = () => {
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/admin/dashboard"
+                  to="/admin/dashboard/validations"
                 >
                   <i className="fa-solid fa-code-pull-request"></i>
                   <span className="hide-menu">validations</span>

@@ -3,7 +3,7 @@ import "../../../styles/COOPERATIVES/SideBar.css";
 import { Link } from "react-router-dom";
 import Logo from "../../../images/ALT.png"
 
-const SideBar = () => {
+const SideBar = ({id}) => {
   return (
     <div className="TATETELA">
       <aside className="left-sidebar-cooperative">
@@ -15,7 +15,7 @@ const SideBar = () => {
               <li className="sidebar-item active">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/cooperative/dashboard"
+                  to={`/cooperative/dashboard/${id}`}
                 >
                   <i className="far fa-clock" aria-hidden="true"></i>
                   <span className="hide-menu">Tableau de Bord</span>
@@ -24,7 +24,7 @@ const SideBar = () => {
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/cooperative/dashboard/menbres"
+                  to={`/cooperative/dashboard/${id}/menbres`}
                 >
                 <i className="fa-solid fa-people-line" aria-hidden="true"></i>
                   <span className="hide-menu">Membres</span>
@@ -33,7 +33,7 @@ const SideBar = () => {
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/cooperative/dashboard/commande"
+                  to={`/cooperative/dashboard/${id}/commande` }
                 >
                 <i className="fa-solid fa-arrows-rotate"></i>
                   <span className="hide-menu">Gestions</span>
@@ -42,7 +42,7 @@ const SideBar = () => {
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/cooperative/dashboard"
+                  to={`/cooperative/dashboard/${id}`}
                 >
                   <i className="fa-solid fa-microchip"></i>
                   <span className="hide-menu">Historique</span>
@@ -51,7 +51,8 @@ const SideBar = () => {
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/cooperative/dashboard/stock"
+                  to={`/cooperative/dashboard/${id}/stock`}
+
                 >
                   <i className="fa-solid fa-cloud"></i>
                   <span className="hide-menu">Produits</span>
@@ -60,7 +61,9 @@ const SideBar = () => {
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/cooperative/dashboard/formation"
+                  
+                  to={`/cooperative/dashboard/${id}/formation`}
+
                 >
                 <i className="fa-solid fa-chalkboard-user"></i>
                   <span className="hide-menu">Formations</span>
@@ -69,7 +72,8 @@ const SideBar = () => {
               <li className="sidebar-item">
                 <Link
                   className="sidebar-link waves-effect waves-dark sidebar-link"
-                  to="/cooperative/dashboard"
+                  to={`/cooperative/dashboard/${id}`}
+
                 >
                   <i className="fa-solid fa-code-pull-request"></i>
                   <span className="hide-menu">validations</span>

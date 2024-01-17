@@ -4,8 +4,8 @@ import "../../../styles/ADMIN/Notification.css";
 const Notification = () => {
   return (
     <>
-    <h2>Notification</h2>
-      <table>
+    <h2>Notifications</h2>
+      <table className="tab-notification">
         <thead>
           <tr>
             <th>Notification</th>

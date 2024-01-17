@@ -1,0 +1,89 @@
+.facturation-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    height: 30%;
+    margin: 10px 5px;
+  }
+  .facturation-card h2 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  .product-info-facturation {
+    display: flex;
+    margin-bottom: 10px;
+    display: flex;
+    /* border: 1px solid; */
+    /* justify-content: space-between center; */
+    align-items: center;
+  }
+  .product-info-facturation img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .product-details-facturation {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid; */
+    width: 100%;
+  }
+  .product-details-facturation p{
+      font-size: .6rem;
+      /* font-weight: bold; */
+      /* border: 1px solid; */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .product-name-facturation{
+    /* border: 1px solid; */
+    width: 100%;
+  }
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .total {
+    font-weight: bold;
+    border-bottom: none;
+  }
+  
+  .payment-options {
+    margin: 20px 0;
+  }
+  
+  .payment-options label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .payment-button {
+    display: block;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #516e32;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payment-button:hover {
+    background-color: #516e32d9;
+  }
+  

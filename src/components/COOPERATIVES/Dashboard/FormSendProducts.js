@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import productNames from "../../../data/ProductsNames";
 import "../../../styles/COOPERATIVES/FormSendProducts.css";
+import axios from "axios";
+// import {useNavigate} from "react-router-dom"
+import { useParams } from "react-router-dom";
 
 const FormSendProducts = () => {
+
+  // const navigate = useNavigate();
+  const { id } = useParams();
   const [formData, setFormData] = useState({
     nomProduit: "",
     descriptionProduit: "",
@@ -39,20 +45,50 @@ const FormSendProducts = () => {
         type === "checkbox" ? checked : type === "file" ? files[0] : value,
     }));
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ajoutez ici la logique pour envoyer les données au backend
+    axios.post(`http://localhost:5000/api/cooperative/dashboard/${id}/stock/add-products`, { formData })
+    .then(res => {
+        console.log(res);
+    })
+    .catch(err=>{
+      console.log(err);
+    })
     console.log("Données soumises :", formData);
   };
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
   
-    setFormData((prevData) => ({
-      ...prevData,
-      photosProduit: [...prevData.photosProduit, file],
-    }));
-  };
+
+  const handleFileChange = (e) => {
+    const files = Array.from(e.target.files);
+
+    // Utilisez FileReader pour lire le contenu des fichiers
+    const filePromises = files.map((file) => {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          resolve(event.target.result);
+        };
+        reader.onerror = (error) => {
+          reject(error);
+        };
+        reader.readAsDataURL(file);
+      });
+      
+    });
+  
+    Promise.all(filePromises)
+      .then((fileContents) => {
+        setFormData((prevData) => ({
+          ...prevData,
+          photosProduit: [...prevData.photosProduit, ...fileContents],
+        }));
+      })
+      .catch((error) => {
+        console.error("Erreur lors de la lecture des fichiers :", error);
+      });
+    }
+    
+    
   return (
     <form onSubmit={handleSubmit} className="form-submit-product">
       <div className="container-form-submit-products">
@@ -152,7 +188,7 @@ const FormSendProducts = () => {
             <label>Quantité en kg:</label>
             <input
               type="number"
-              name="poidsQuantite"
+              name="Quantite"
               value={formData.Quantite}
               onChange={handleChange}
             />

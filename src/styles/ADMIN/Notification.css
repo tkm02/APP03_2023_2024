@@ -1,45 +1,47 @@
-table {
+.tab-notification {
   width: 80%;
   border-collapse: collapse;
   margin: 0 50px 0 auto;
+  font-family: "Outfit", sans-serif;
+
 }
-table th,
-table td {
+.tab-notification th,
+.tab-notification td {
   padding: 10px;
   text-align: left;
   vertical-align: middle;
   border-bottom: 1px solid #ddd;
 }
 
-table th {
+.tab-notification th {
   background-color: #0D78F2;
   font-weight: bold;
   color: #fff;
 }
-thead {
+.tab-notification thead {
   background-color: #fff;
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
-table tr:hover {
+.tab-notification tr:hover {
   background-color: #DD1573;
   color: #fff;
 }
 
-table td.image {
+.tab-notification td.image {
   max-width: 100px;
 }
 td img {
   width: 50px;
 }
 
-table td.image img {
+.tab-notification td.image img {
   max-width: 100%;
   height: auto;
 }
-table td button{
+.tab-notification td button{
   background-color: #DD1573;
     border: 0;
     padding: 5px;

@@ -1,13 +1,13 @@
 .container-cards-cooperatives{
     /* border: 1px solid; */
     width: 90%;
-    margin: 0 auto;
-    /* justify-content: space-between; */
+    margin: 50px auto;
+    justify-content: space-between;
     display: flex;
     /* padding: 10px; */
 }
 .card-cooperative-info{
-    border: 1px solid #0EAF22;
+    border: .3px solid #f1f1f1;
     width: 300px;
     margin: 0 5px;
 }
@@ -35,7 +35,7 @@
     margin: 2px;
 }
 .card-cooperative-info a{
-    background-color: #0EAF22;
+    background-color: #f1f1f1;
     color: #fff;
     text-decoration: none;
     text-align: center;

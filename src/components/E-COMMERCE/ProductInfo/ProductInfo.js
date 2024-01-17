@@ -1,17 +1,17 @@
 import React from "react";
 import "../../../styles/Ecom/ProductInfo.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const ProductInfo = () => {
-  const rating = 4.5;
+const ProductInfo = ({oneProduct}) => {
+
   return (
     <div className="droite">
       <div className="ligne1">
-        <h2>Nom du produit</h2>
+        <h2>{oneProduct.nomProduit}</h2>
         <div className="stock">En stock</div>
       </div>
       <div className="étoile">
-        {Array.from({ length: rating }).map((_, index) => (
+        {Array.from({ length: oneProduct.rating }).map((_, index) => (
           <span key={index} className="star">
             ★
           </span>
@@ -19,9 +19,7 @@ const ProductInfo = () => {
         15 avis
       </div>
       <div className="prix">
-        <del>XOF 5000/kg</del>
-        <p>XOF 2500/kg</p>
-        <div className="reduction">50% reduction</div>
+        <p>XOF {oneProduct.prixUnitaire}/kg</p>
       </div>
       <div className="bar1"> </div>
       <div className="ligne2">
@@ -59,7 +57,7 @@ const ProductInfo = () => {
       <div className="bar3"> </div>
       <div className="ligne4">
         <h4>Catégories:</h4>
-        <p>Légumes</p>
+        <p>{oneProduct.typeProduit}</p>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ const Cooperative = () => {
   return (
     <div>
       <Routes>
-        <Route path="/dashboard/*" element={<Dashboard />} />
+        <Route path="/dashboard/:id/*" element={<Dashboard />} />
         <Route path="/" element={<Login />} />
       </Routes>
     </div>
