@@ -62,6 +62,28 @@ const cooperativeSchema = new mongoose.Schema({
       default: false,
     },
   },
+  compteMoney: {
+    Mtn: {
+      type: Number,
+      default: 0,
+    },
+    Moov: {
+      type: Number,
+      default: 0,
+    },
+    Orange: {
+      type: Number,
+      default: 0,
+    },
+    Wave: {
+      type: Number,
+      default: 0,
+    },
+    CarteBancaire: {
+      type: Number,
+      default: 0,
+    },
+  },
   nombreMembres: {
     type: Number,
     required: true,
@@ -97,6 +119,7 @@ const cooperativeSchema = new mongoose.Schema({
   },
   members: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Producteur' }],
   commandes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Commande' }],
+  products: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }],
   // ... autres champs que vous pourriez avoir
 });
 

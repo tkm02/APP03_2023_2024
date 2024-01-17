@@ -1,5 +1,6 @@
 // LES IMPORTS
 const express = require("express");
+const path = require("path")
 const app = express();
 const dotenv = require("dotenv");
 const cors = require("cors");
@@ -42,15 +43,20 @@ app.use(
     }
   })
 )
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(bodyParser.json());
+
+app.use(bodyParser.urlencoded({ extended: true, limit: '100mb' }));
+app.use(express.json()); 
+app.use(bodyParser.json({ limit: '100mb' })); // Adjust the limit as needed
 app.use(express.static(__dirname + '/public'));
+
+
+
 
 // LES POINTS D'ENTREE DES APPLICATIONS
 app.use('/api/admin',routerAdmin)
 app.use('/api/cooperative',routerCooperative)
 app.use('/api/ecom',routerEcom)
+
 
 
 

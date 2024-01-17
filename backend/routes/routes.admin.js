@@ -9,8 +9,11 @@ const {
     getAllCooperative,
     getOneCooperative,
     getOneCourse,
-    getAllCourse
+    getAllCourse,
+    getAllProducts,
+    isValide,
 } = require("../controllers/controllers.admin") ;
+const { getOneProduct } = require("../controllers/controllers.cooperative");
 
 
 routerAdmin.post('/',loginAdmin)
@@ -21,6 +24,12 @@ routerAdmin.get('/dashboard/formation',getAllCourse)
 routerAdmin.get('/dashboard/formation/:id',getOneCourse)
 routerAdmin.get("/dashboard/cooperatives",getAllCooperative)
 routerAdmin.get("/dashboard/cooperatives/:id",getOneCooperative)
+routerAdmin.get("/dashboard/validations",getAllProducts)
+routerAdmin.get("/dashboard/validations/:productId",getOneProduct)
+
+routerAdmin.put("/dashboard/validations/:productId",isValide)
+// routerAdmin.put("/dashboard/validations/:productId",noValide)
+
 
 
 

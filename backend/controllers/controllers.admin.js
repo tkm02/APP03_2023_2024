@@ -2,6 +2,7 @@ const Admin = require("../models/models.admin");
 const Cooperative = require("../models/models.cooperative");
 const Formation = require("../models/models.formations");
 const bcrypt = require("bcrypt");
+const Produits = require("../models/models.produits");
 
 // ADMIN
 const registrationAdmin = (req, res) => {
@@ -36,7 +37,6 @@ const loginAdmin = (req, res) => {
         return res.status(401).json({ message: "Mot de passe incorrect" });
       }
       req.session.adminToken = admin._id + Date.now();
-
       res.json({ message: req.session });
     });
   });
@@ -45,12 +45,12 @@ const loginAdmin = (req, res) => {
 //COOPERATIVES
 const registrationCooperative = (req, res) => {
   const saltRounds = 10;
-  bcrypt.hash(req.body.password, saltRounds, (err, hash) => {
+  bcrypt.hash(req.body.formData.password, saltRounds, (err, hash) => {
     if (err) {
       console.log(err);
       return res.status(500).send("Erreur lors du hachage du mot de passe");
     }
-    req.body.password = hash;
+    req.body.formData.password = hash;
     // const chemin = req.body.image;
     // const nomFichier = chemin.substring(chemin.lastIndexOf("\\") + 1);
     // const imagePath = path.resolve("public", "image", chemin);
@@ -59,19 +59,19 @@ const registrationCooperative = (req, res) => {
     // console.log(imageDataUrl);
     // Créer un nouvel objet Cooperative
     const cooperative = new Cooperative({
-      cooperativeName: req.body.cooperativeName,
-      addressGeographique: req.body.addressGeographique,
-      numeroTelephone: req.body.numeroTelephone,
-      representantLegal: req.body.representantLegal,
-      representativeRole: req.body.representativeRole,
-      representantLegal: req.body.representantLegal,
-      representativeEmail: req.body.representativeEmail,
-      representativePhoneNumber: req.body.representativePhoneNumber,
-      typesProduits: req.body.typesProduits,
-      password: req.body.password,
-      nombreMembres: req.body.nombreMembres,
+      cooperativeName: req.body.formData.cooperativeName,
+      addressGeographique: req.body.formData.addressGeographique,
+      numeroTelephone: req.body.formData.numeroTelephone,
+      representantLegal: req.body.formData.representantLegal,
+      representativeRole: req.body.formData.representativeRole,
+      representantLegal: req.body.formData.representantLegal,
+      representativeEmail: req.body.formData.representativeEmail,
+      representativePhoneNumber: req.body.formData.representativePhoneNumber,
+      typesProduits: req.body.formData.typesProduits,
+      password: req.body.formData.password,
+      nombreMembres: req.body.formData.nombreMembres,
       image: req.body.image,
-      acceptationConditions: req.body.acceptationConditions,
+      acceptationConditions: req.body.formData.acceptationConditions,
     });
 
     // Sauvegarder la coopérative dans la base de données
@@ -92,6 +92,11 @@ const getOneCooperative = (req, res) => {
   Cooperative.findById(req.params.id)
     .then((oneCooperative) => res.json({ oneCooperative }))
     .catch((err) => res.json({ err }));
+};
+const getAllProducts = (req, res) => {
+  Produits.find()
+    .then((products) => res.status(200).json({ products }))
+    .catch((err) => res.status(500).json({ err }));
 };
 
 //FORMATIONS
@@ -118,12 +123,42 @@ const getAllCourse = (req, res) => {
     .then((formations) => res.status(200).json({ formations }))
     .catch((err) => res.status(500).json({ err }));
 };
-const getOneCourse = (req,res)=>{
+const getOneCourse = (req, res) => {
   Formation.findById(req.params.id)
     .then((oneFormation) => res.json({ oneFormation }))
     .catch((err) => res.json({ err }));
-}
+};
+const isValide = async (req, res) => {
+  try {
+    console.log(req.body.val);
 
+    // Find the product document
+    const product = await Produits.findById(req.params.productId);
+
+    if (!product) {
+      throw new Error(`Product with ID ${req.params.productId} not found`);
+    }
+
+    // Update the isValide property directly
+    product.isValide = req.body.val;
+
+    // Save the updated document
+    await product.save();
+
+    res.status(200).json({ message: 'Product isValide updated successfully' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error updating product' });
+  }
+};
+// function noValide(req, res) {
+//   const product = Produits.findById(req.params.productId)
+//     .then(prod=>{
+//       prod.isValide = false
+//     })
+//     .catch(err=>res.send(err))
+//     product.save();
+// }
 module.exports = {
   loginAdmin,
   registrationAdmin,
@@ -132,5 +167,7 @@ module.exports = {
   getAllCooperative,
   getOneCooperative,
   getAllCourse,
-  getOneCourse
+  getOneCourse,
+  getAllProducts,
+  isValide,
 };
